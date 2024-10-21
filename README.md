@@ -19,7 +19,7 @@ Kerrie Mengersen
 ## Input data
 
 The raw simulated cancer data and population data, stored in path `Data\Simulated cancer data (raw)` 
-The path 'Data\Simulated cancer data (clean)' contained the clean data wihch ready to used.
+The path `Data\Simulated cancer data (clean)` contained the clean data wihch ready to used.
 
 
 ## Analysis
