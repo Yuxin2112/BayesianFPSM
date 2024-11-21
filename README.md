@@ -19,14 +19,17 @@ Distinguished Prof. Kerrie Mengersen
 ## Input data
 
 The raw simulated cancer data and population data, stored in path `Data\Simulated cancer data (raw)` ,
-The path `Data\Simulated cancer data (clean)` contained the clean data which was used in analysis.\\
+The path `Data\Simulated cancer data (clean)` contained the clean data which was used in analysis.\
 
 The folder `Data\Geographical data` contains SLA information, which used in spatial modelling, and map creation.
 
 
 ## Analysis
 
-- Data preperation: 'popmort_poisson.do'
+### Step 1: Data preperation
+'STATA/popmort_poisson.do' -- fitting possion model to population data, to generate population mortality and survival rate\
+'STATA/adjm.do' -- Create adjacency matrix 
+
 
 - Fitting flexible parametric model: 'stpm2_winbugs.do'
 
