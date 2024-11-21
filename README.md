@@ -10,16 +10,18 @@ to further validate it against a real-world application.
 Author: Yuxin Huang
 
 Supervisors:
-Helen Thompson
-Susanna Cramb
-Jessica Cameron
-Peter Badde
-Kerrie Mengersen
+A/Prof. Helen Thompson,
+A/Prof. Susanna Cramb,
+Dr. Jessica Cameron,
+Prof. Peter Badde,
+Distinguished Prof. Kerrie Mengersen
 
 ## Input data
 
-The raw simulated cancer data and population data, stored in path `Data\Simulated cancer data (raw)` 
-The path `Data\Simulated cancer data (clean)` contained the clean data wihch ready to used.
+The raw simulated cancer data and population data, stored in path `Data\Simulated cancer data (raw)` ,
+The path `Data\Simulated cancer data (clean)` contained the clean data which was used in analysis.\\
+
+The folder `Data\Geographical data` contains SLA information, which used in spatial modelling, and map creation.
 
 
 ## Analysis
