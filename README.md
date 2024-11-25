@@ -66,6 +66,10 @@ Data columns: pop_dths.txt (99902 records)
 ### clean data
 Folder `Data\Simulated cancer data (clean)` contained the clean data which was used in analysis.
 
+- clean cancer data (`cancer_work.dta`): only containing individual age 15-89
+
+- clean population data (popmort_work.dta): only containing individual age 15-89, with survival rate (surv) and mortality rate (rate) variables
+
 Folder `Data\Geographical data` contains SLA information, which used in spatial modelling, and map creation.
 
 
