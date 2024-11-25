@@ -28,12 +28,12 @@ Distinguished Prof. Kerrie Mengersen
 
 ### raw data
 
-Folder: 'Data/Simulated cancer data (raw)' containing two raw datasets:
+Folder: `Data/Simulated cancer data (raw)` containing two raw datasets:
 - cancer.txt -  contains simulated data to represent 
               a hypothetical gender-specific cancer
 
 Data columns: cancer.txt (15051 records)
-====================================================================================
+
 id		Unique identifier for each case.
 sex		All values are 2 (one gender).
 year		Year of diagnosis. Ranges from 1997 to 2007.
@@ -52,7 +52,7 @@ exit		Same as fu_date (DDMMMYYYY).
                  population mortality files
 
 Data columns: pop_dths.txt (99902 records)
-=====================================================================================
+
 year		Ranges from 1997 to 2007.
 sex		All values are 2 (one gender).
 agegroup	Values from 1 to 19 representing 5-year age groups (0-4,5-9...,90+).
@@ -69,23 +69,23 @@ Folder `Data\Geographical data` contains SLA information, which used in spatial 
 ## Analysis
 
 ### Step 1: Data preperation
-- 'STATA/popmort_poisson.do':  fitting possion model to population data, to generate population mortality and survival rate ('popmort_work.dta')
+- `STATA/popmort_poisson.do`:  fitting possion model to population data, to generate population mortality and survival rate (`popmort_work.dta`)
 
-- 'STATA/adjm.do': Create adjacency matrix  ('adj_matrix.dta')
+- `STATA/adjm.do`: Create adjacency matrix  (`adj_matrix.dta`)
 
 ### Step 2: Fitting model
-(model file: 'Analysis/Model_YH_gamma0.5.txt')
--  'stpm2_winbugs.do': runs Bayesian analysis in WinBugs from STATA
+(model file: `Analysis/Model_YH_gamma0.5.txt`)
+-  `stpm2_winbugs.do`: runs Bayesian analysis in WinBugs from STATA
 
--  'mcmc_winbugs.R': runs Bayesian analysis in WinBugs from R
+-  `mcmc_winbugs.R`: runs Bayesian analysis in WinBugs from R
 
--  'mcmc_diagnosis.R': perform Geweke test on MCMC chain, and generate trace plots and density plots
+-  `mcmc_diagnosis.R`: perform Geweke test on MCMC chain, and generate trace plots and density plots
 
-- 'lle_est.do' - obtains estimates for the Loss in Life Expectancy 
+- `lle_est.do` - obtains estimates for the Loss in Life Expectancy 
 
-- 'cr_est.do' - obtains estimates for the crude probability of death  
+- `cr_est.do` - obtains estimates for the crude probability of death  
 
 ### Step 3: Generate outputs
-- 'results_mapping.R': create maps of estimation
+- `results_mapping.R`: create maps of estimation
 
 
