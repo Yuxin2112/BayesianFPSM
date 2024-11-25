@@ -1,0 +1,74 @@
+model {
+K <- 10000
+
+for(i in 1:datarows) {
+
+# Use zeros trick 
+zeros[i] <- 0
+zeros[i] ~ dpois(phi[i])
+phi[i] <- - lnL[i] + K
+
+
+# write linear predictor (log cumulative hazard)
+
+eta[i] <- gamma[1] + gamma[2]*rcs1[i] + gamma[3]*rcs2[i] +gamma[4]*rcs3[i] + gamma[5]*rcs4[i] + gamma[6]*rcs5[i] + beta[1]*cage1[i]
++ beta[2]*cage2[i] + u[grid[i]] + v[grid[i]]
+
+# write derivative of the linear predictor
+
+dsp[i] <-gamma[2]*drcs1[i] + gamma[3]*drcs2[i] + gamma[4]*drcs3[i] + gamma[5]*drcs4[i] + gamma[6]*drcs5[i]
+
+# write excess hazard 
+# we use a trick to avoid zero excess hazard
+
+lambda[i] <- (1/t[i])*max(dsp[i]*exp(eta[i]),0.00001) 
+
+# write relative survival 
+r[i] <- exp(-max(exp(eta[i]),0.00001))
+
+lnL[i]<- d[i]*log(rate[i] + lambda[i]) + log(r[i])
+
+}
+
+
+# ICAR prior distribution for spatial random effects:
+
+
+u[1:Nsla] ~ car.normal(adj[], weights[], num[], tauu)
+for (k in 1:sumNumNeigh) {weights[k]<- 1 }
+
+
+for (i in 1:Nsla) {
+v[i] ~ dnorm(0,tauv)
+}
+
+
+# Other priors:
+
+## In WinBugs, in all distributions, instead of variance, precision is used,
+## where precision is 1/variance: 
+## tauu <- 1/(sigmau*sigmau)
+
+tauu ~ dgamma(0.5,0.0005)
+tauv ~ dgamma(0.5,0.0005)
+
+
+
+varucon <- 1/tauu
+varv <- 1/tauv
+varumarginal <- sd(u[])*sd(u[])
+fracspatial <- varumarginal
+
+for(j in 1:Nsla){
+ranuv[j] <- exp(u[j]+v[j])
+}
+
+for(j in 1:2){
+beta[j] ~ dnorm(0,0.001)
+}
+
+for(j in 1:6){
+gamma[j] ~ dnorm(0,0.001)
+}
+
+}
