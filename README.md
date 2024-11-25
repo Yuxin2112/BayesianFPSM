@@ -33,10 +33,8 @@ Folder: `Data/Simulated cancer data (raw)` containing two raw datasets:
               a hypothetical gender-specific cancer
 
 Data columns: cancer.txt (15051 records)
-| Command | Description |
+| Variable | Description |
 | --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
 |id	|	Unique identifier for each case.|
 |sex|	All values are 2 (one gender).|
 |year|		Year of diagnosis. Ranges from 1997 to 2007.|
@@ -54,18 +52,16 @@ Data columns: cancer.txt (15051 records)
                  population mortality files
 
 Data columns: pop_dths.txt (99902 records)
-
-year		Ranges from 1997 to 2007.
-
-sex		All values are 2 (one gender).
-
-agegroup	Values from 1 to 19 representing 5-year age groups (0-4,5-9...,90+).
-
-grid		Represents the geographical area of residence at diagnosis (values 1 to 478). 
-
-count		Number of deaths (all causes).
-
-pop		Population size.
+| Variable | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
+|year	|	Ranges from 1997 to 2007.
+|sex	|	All values are 2 (one gender).
+|agegroup|	Values from 1 to 19 representing 5-year age groups (0-4,5-9...,90+).
+|grid	|	Represents the geographical area of residence at diagnosis (values 1 to 478). 
+|count	|	Number of deaths (all causes).
+|pop	|	Population size.
 
 ### clean data
 Folder `Data\Simulated cancer data (clean)` contained the clean data which was used in analysis.
