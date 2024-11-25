@@ -33,28 +33,18 @@ Folder: `Data/Simulated cancer data (raw)` containing two raw datasets:
               a hypothetical gender-specific cancer
 
 Data columns: cancer.txt (15051 records)
-
-id		Unique identifier for each case.
-
-sex		All values are 2 (one gender).
-
-year		Year of diagnosis. Ranges from 1997 to 2007.
-
-site10group	All values are 1 (hypothetical cancer).
-
-dx_date		Date of diagnosis (DDMMMYYYY).
-
-dth_date	Date of death (DDMMMYYYY).
-
-age		Age at diagnosis (years).
-
-bagegroup	Broad age group at diagnosis (1=0-49 years, 2=50-69 years, 3=70-89 years).Missing means age was 90+ years.
-  
-grid		Represents the geographical area of residence at diagnosis (values 1 to 478). 
-
-fu_date		Date of censoring (31Dec2007) or date of death (DDMMMYYYY).
-
-exit		Same as fu_date (DDMMMYYYY).
+-------------
+|id	|	Unique identifier for each case.
+|sex|	All values are 2 (one gender).
+|year|		Year of diagnosis. Ranges from 1997 to 2007.
+|site10group|	All values are 1 (hypothetical cancer).
+|dx_date|		Date of diagnosis (DDMMMYYYY).
+|dth_date|	Date of death (DDMMMYYYY).
+|age|		Age at diagnosis (years).
+|bagegroup|	Broad age group at diagnosis (1=0-49 years, 2=50-69 years, 3=70-89 years).Missing means age was 90+ years.
+|grid	|	Represents the geographical area of residence at diagnosis (values 1 to 478). 
+|fu_date	|	Date of censoring (31Dec2007) or date of death (DDMMMYYYY).
+|exit	|	Same as fu_date (DDMMMYYYY).
 
 
 - pop_dths.txt - contains simulated data to represent hypothetical 
